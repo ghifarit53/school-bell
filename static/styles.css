@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+:root {
+	--font: "Rubik", sans-serif;
+
+	--bg1: #12151e;
+	--bg2: #232733;
+	--fg: #d6d8eb;
+
+	--danger: #eb9797;
+	--regular: #d6e4ab;
+	--stop: #eec299;
+	--blue: #b6d0fd;
+}
+
+html {
+	justify-content: center;
+	display: flex;
+	margin-top: 2rem;
+	width: 100%;
+	line-height: 25px;
+}
+
+body {
+	background-color: var(--bg2);
+	color: var(--fg);
+	font-family: var(--font);
+	user-select: none;
+}
+
+button {
+	margin: 2px auto;
+	width: 200px;
+	font-family: var(--font);
+	font-size: 14px;
+	border: none;
+	padding: 15px 60px;
+	text-decoration: none;
+	outline: none;
+	transition-duration: 0.3s;
+}
+
+.btn-regular {
+	background-color: var(--regular);
+	color: var(--bg1);
+}
+
+.btn-regular:hover {
+	background-color: var(--regular);
+	color: var(--bg1);
+	filter: brightness(110%);
+}
+
+.btn-regular:active {
+	background-color: var(--regular);
+	color: var(--bg1);
+	filter: brightness(80%);
+}
+
+.btn-emergency {
+	background-color: var(--danger);
+	color: var(--bg1);
+}
+
+.btn-emergency:hover {
+	background-color: var(--danger);
+	color: var(--bg1);
+	filter: brightness(110%);
+}
+
+.btn-emergency:active {
+	background-color: var(--danger);
+	color: var(--bg1);
+	filter: brightness(80%);
+}
+
+.btn-stop {
+	background-color: var(--stop);
+	color: var(--bg1);
+}
+
+.btn-stop:hover {
+	background-color: var(--stop);
+	color: var(--bg1);
+	filter: brightness(110%);
+}
+
+.btn-stop:active {
+	background-color: var(--stop);
+	color: var(--bg1);
+	filter: brightness(80%);
+}
+
+#inner_b {
+	background-color: var(--bg1);
+	text-align: center;
+	padding: 40px 80px 40px 80px;
+	border: 3px solid var(--blue);
+}
+
+#outer_b {
+	border: 12px solid var(--bg1);
+}
