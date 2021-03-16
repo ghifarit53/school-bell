@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os/exec"
 )
 
 func handlerIndex(w http.ResponseWriter, r *http.Request) {
@@ -14,8 +15,24 @@ func handlerIndex(w http.ResponseWriter, r *http.Request) {
     http.ServeFile(w, r, p)
 }
 
+func playBellRinging(w http.ResponseWriter, r *http.Request) {
+	exec.Command("mpv", "./static/audio/bell-ringing.mp3").Run()
+}
+
+func playDangerSiren(w http.ResponseWriter, r *http.Request) {
+	exec.Command("mpv", "./static/audio/danger-siren.mp3").Run()
+}
+
+func playEarthquakeSiren(w http.ResponseWriter, r *http.Request) {
+	exec.Command("mpv", "./static/audio/earthquake-siren.mp3").Run()
+}
+
 func main() {
+	// routing
 	http.HandleFunc("/", handlerIndex)
+	http.HandleFunc("/bell-ringing", playBellRinging)
+	http.HandleFunc("/danger-siren", playDangerSiren)
+	http.HandleFunc("/earthquake-siren", playEarthquakeSiren)
 
 	var address = "localhost:1337"
 	fmt.Printf("server started at %s\n", address)
