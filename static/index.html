@@ -3,8 +3,9 @@
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="styles.css">
-	<title></title>
+	<link rel="stylesheet" href="/static/styles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>School Bell</title>
 </head>
 <body>
 	<div id="outer_b">
@@ -12,9 +13,9 @@
 			<h1 id="header">School bell</h1>
 			<h3>Regular</h3>
 
-			<button class="btn-regular">School start/end</button>
+			<button class="btn-regular" onclick="$.ajax({url:'/bell-ringing'})">School start/end</button>
 			<button class="btn-regular">Recess time start/stop</button><br>
-			<button class="btn-regular">Announcement start</button>
+			<button class="btn-regular" onclick="$">Announcement start</button>
 			<button class="btn-regular">Announcement stop</button>
 
 			<h3>Emergency</h3>
