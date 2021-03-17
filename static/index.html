@@ -13,17 +13,17 @@
 			<h1 id="header">School bell</h1>
 			<h3>Regular</h3>
 
-			<button class="btn-regular" onclick="$.ajax({url:'/bell-ringing'})">School start/end</button>
-			<button class="btn-regular">Recess time start/stop</button><br>
-			<button class="btn-regular" onclick="$">Announcement start</button>
-			<button class="btn-regular">Announcement stop</button>
+			<button class="btn-regular" onclick="$.ajax({url:'/play-school-time'})">School time start/end</button>
+			<button class="btn-regular" onclick="$.ajax({url:'/play-recess-time'})">Recess time start/stop</button><br>
+			<button class="btn-regular" onclick="$.ajax({url:'/play-anno-start'})">Announcement start</button>
+			<button class="btn-regular" onclick="$.ajax({url:'/play-anno-stop'})">Announcement stop</button>
 
 			<h3>Emergency</h3>
-			<button class="btn-emergency">Earthquake</button>
-			<button class="btn-emergency">Danger</button>
+			<button class="btn-emergency" onclick="$.ajax({url:'/play-earthquake-siren'})">Earthquake</button>
+			<button class="btn-emergency" onclick="$.ajax({url:'/play-danger-siren'})">Danger</button>
 
 			<h3>Stop</h3>
-			<button class="btn-stop">Stop audio</button>
+			<button class="btn-stop" onclick="$.ajax({url:'/stop-audio'})">Stop audio</button>
 		</div>
 	</div>
 </body>

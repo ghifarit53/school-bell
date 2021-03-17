@@ -15,11 +15,16 @@ func handlerIndex(w http.ResponseWriter, r *http.Request) {
     http.ServeFile(w, r, p)
 }
 
-func playBellRinging(w http.ResponseWriter, r *http.Request) {
+func playSchoolTime(w http.ResponseWriter, r *http.Request) {
 	// very rough, and everything is hardcoded
 	// but this is the best I could do
 	exec.Command("pkill", "mpv").Run()
-	exec.Command("mpv", "--no-video", "--loop-playlist=no", "./static/audio/bell-ringing.mp3").Run()
+	exec.Command("mpv", "--no-video", "--loop-playlist=no", "./static/audio/school-time.mp3").Run()
+}
+
+func playRecessTime(w http.ResponseWriter, r *http.Request) {
+	exec.Command("pkill", "mpv").Run()
+	exec.Command("mpv", "--no-video", "--loop-playlist=no", "./static/audio/recess-time.mp3").Run()
 }
 
 func playAnnoStart(w http.ResponseWriter, r *http.Request) {
@@ -51,17 +56,18 @@ func main() {
 	http.HandleFunc("/", handlerIndex)
 
 	// regular bell
-	http.HandleFunc("/bell-ringing", playBellRinging)
-	http.HandleFunc("/anno-start", playAnnoStart)
-	http.HandleFunc("/anno-stop", playAnnoStop)
+	http.HandleFunc("/play-school-time", playSchoolTime)
+	http.HandleFunc("/play-recess-time", playRecessTime)
+	http.HandleFunc("/play-anno-start", playAnnoStart)
+	http.HandleFunc("/play-anno-stop", playAnnoStop)
 
 	// danger siren
-	http.HandleFunc("/danger-siren", playDangerSiren)
-	http.HandleFunc("/earthquake-siren", playEarthquakeSiren)
+	http.HandleFunc("/play-danger-siren", playDangerSiren)
+	http.HandleFunc("/play-earthquake-siren", playEarthquakeSiren)
 	http.HandleFunc("/stop-audio", stopAudio)
 
 	// TODO: use port from argv
-	var address = "localhost:1337"
+	var address = "localhost:8033"
 	fmt.Printf("server started at %s\n", address)
 	err := http.ListenAndServe(address, nil)
 	if err != nil {
