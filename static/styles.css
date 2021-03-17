@@ -3,13 +3,13 @@
 :root {
 	--font: "Rubik", sans-serif;
 
-	--bg: #12151e;
-	--fg: #d6d8eb;
+	--bg: #EBEBEB;
+	--fg: #2E2828;
 
-	--danger: #eb9797;
-	--regular: #d6e4ab;
-	--stop: #eec299;
-	--blue: #b6d0fd;
+	--danger: #EB4246;
+	--regular: #45B22F;
+	--stop: #F5B90F;
+	--blue: #54A2D8;
 
 	--brighten: brightness(110%);
 	--darken: brightness(80%);
