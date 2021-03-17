@@ -1,5 +1,4 @@
 <div align="center">
- <img src="static/logo.svg" alt="logo">
  <img src="static/screenshot.png" alt="screenshot">
 </div>
 
