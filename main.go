@@ -67,7 +67,7 @@ func main() {
 	http.HandleFunc("/stop-audio", stopAudio)
 
 	// TODO: use port from argv
-	var address = "localhost:8033"
+	var address = "localhost:8012"
 	fmt.Printf("server started at %s\n", address)
 	err := http.ListenAndServe(address, nil)
 	if err != nil {
