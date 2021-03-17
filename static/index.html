@@ -8,13 +8,13 @@
 	<title>School Bell</title>
 </head>
 <body>
-	<div id="outer_b">
-		<div id="inner_b">
-			<h1 id="header">School bell</h1>
+	<div id="outer-b">
+		<div id="inner-b">
+			<img src="/static/logo.svg" alt="logo">
 			<h3>Regular</h3>
 
 			<button class="btn-regular" onclick="$.ajax({url:'/play-school-time'})">School time start/end</button>
-			<button class="btn-regular" onclick="$.ajax({url:'/play-recess-time'})">Recess time start/stop</button><br>
+			<button class="btn-regular" onclick="$.ajax({url:'/play-recess-time'})">Recess time start/end</button><br>
 			<button class="btn-regular" onclick="$.ajax({url:'/play-anno-start'})">Announcement start</button>
 			<button class="btn-regular" onclick="$.ajax({url:'/play-anno-stop'})">Announcement stop</button>
 

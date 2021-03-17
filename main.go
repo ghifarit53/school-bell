@@ -17,7 +17,7 @@ func handlerIndex(w http.ResponseWriter, r *http.Request) {
 
 func playSchoolTime(w http.ResponseWriter, r *http.Request) {
 	// very rough, and everything is hardcoded
-	// but this is the best I could do
+	// but this is the best I could do for now
 	exec.Command("pkill", "mpv").Run()
 	exec.Command("mpv", "--no-video", "--loop-playlist=no", "./static/audio/school-time.mp3").Run()
 }
