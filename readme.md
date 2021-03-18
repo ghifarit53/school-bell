@@ -34,6 +34,8 @@ $
 $ # Run the binary
 $ ./school-bell
 server started at localhost:8012
+$
+$ # Then open localhost:8012 on your browser
 ```
 
 ## Configuration
@@ -43,3 +45,7 @@ and recompile again.
 
 If you want to change the UI, e.g. background image, colors, you can just
 edit the HTML and CSS files in the `static` folder
+
+## Todo
+- [ ] Use Go library to play audio (faiface/beep seems promising)
+- [ ] Add authentication
